@@ -1,5 +1,5 @@
 {
-  "name": "alteracvallypremadehelper",
+  "name": "alteracvalleypremadehelper",
   "version": "0.0.1",
   "description": "Discord Bot that eases creation of AV Premades",
   "main": "dist/index.js",
