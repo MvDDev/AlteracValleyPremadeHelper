@@ -15,7 +15,7 @@
     "av",
     "premade"
   ],
-  "author": "Marten van Dijk",
+  "author": "MvD",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^13.1.6",

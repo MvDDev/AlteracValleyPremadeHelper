@@ -1,5 +1,6 @@
 import * as Discord from 'discord.js';
-import { Config, QueueResult } from '../types/types';
+import QueueResult from '../types/queue-result';
+import Config from '../types/config';
 
 export default async function postQueueResults(message: Discord.Message, queueResults: QueueResult[], config: Config) {
   let avIds = '';

@@ -1,5 +1,7 @@
 import * as Discord from 'discord.js';
-import { QueueResult, Config } from '../types/types';
+import QueueResult from '../types/queue-result';
+import Config from '../types/config';
+
 
 export default async function handleNumber(message: Discord.Message, queueResults: QueueResult[], config: Config) {
   // message.content is a number from 1 to config.avIdMax
@@ -15,7 +17,7 @@ export default async function handleNumber(message: Discord.Message, queueResult
   queueResults[avIdIndex].totalPlayers++;
 
   // Check if poster has a valid Discord nickname, extract role (Tank/Healer/DPS) if so
-  const roleMatch = message.member.nickname?.match(/^\((?<role>.*)\) .* <.*>$/);
+  const roleMatch = message.member.nickname?.match(RegExp(config.nicknameMask));
 
   // Does the player have the Tank role?
   if (roleMatch?.groups?.role.toUpperCase().includes('T')) {

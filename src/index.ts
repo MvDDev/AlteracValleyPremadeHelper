@@ -2,7 +2,8 @@ import * as Discord from 'discord.js';
 import handleNumber from './commands/handle-number';
 import sendNamingRules from './common/send-naming-rules';
 import postQueueResults from './common/post-queue-results';
-import { Config, QueueResult } from './types/types';
+import QueueResult from './types/queue-result';
+import Config from './types/config';
 import { loginKey } from './secret';
 
 const config = new Config();
