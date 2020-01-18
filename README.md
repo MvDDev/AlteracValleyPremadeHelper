@@ -12,7 +12,7 @@ Make sure you have NodeJS 10.x installed.
 Clone this repository to your machine and run npm install to install dependencies.
 
 ```shell
-git clone https://github.com/your/awesome-project.git
+git clone https://github.com/MvDDev/AlteracValleyPremadeHelper
 cd awesome-project/
 npm install
 ```
@@ -63,6 +63,8 @@ Things to consider adding/changing
 * Help function
 * Operator commands to change bot settings 
 * Add support for differing configuration per guild (e.g. via a Config array)
+* Add 'snipe' limits and don't auto generate invite for those AVs
+* Skip first x voice channels so moderator can use those for 'snipe'AVs
 
 ## Contributing
 
