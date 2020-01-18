@@ -13,7 +13,7 @@ Clone this repository to your machine and run npm install to install dependencie
 
 ```shell
 git clone https://github.com/MvDDev/AlteracValleyPremadeHelper
-cd awesome-project/
+cd AlteracValleyPremadeHelper/
 npm install
 ```
 
