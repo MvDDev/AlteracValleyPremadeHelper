@@ -4,7 +4,7 @@
 Bot parses (AV) numbers posted to configurabLe channel, summarizes the results
 and then posts the summary as an embed with clickable voice channel invites.
 Voice channels should be named AV* and the bot must have permission to create 
-invites for tthose voice channels.
+invites for those voice channels.
 
 ## Getting started
 
@@ -13,7 +13,7 @@ Clone this repository to your machine and run npm install to install dependencie
 
 ```shell
 git clone https://github.com/MvDDev/AlteracValleyPremadeHelper
-cd awesome-project/
+cd AlteracValleyPremadeHelper/
 npm install
 ```
 
