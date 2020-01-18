@@ -6,10 +6,14 @@ import QueueResult from './types/queue-result';
 import Config from './types/config';
 import { loginKey } from './secret';
 
+interface TimeoutDictionary {
+  [index: string]: NodeJS.Timeout;
+}
+
 const config = new Config();
 const client = new Discord.Client();
 let queueResults: QueueResult[] = [];
-let postQueueResultsTimeout: NodeJS.Timeout;
+const postQueueResultsTimeouts: TimeoutDictionary = {};
 
 client.once('ready', () => {
   console.log('Ready!');
@@ -32,8 +36,9 @@ client.on('message', message => {
         handleNumber(message, queueResults, config);
 
         // Wait for followup numbers, if none received during timeout window post results
-        if (postQueueResultsTimeout) clearTimeout(postQueueResultsTimeout);
-        postQueueResultsTimeout = setTimeout(() => {
+        const guildId = message.guild.id;
+        if (postQueueResultsTimeouts[guildId]) clearTimeout(postQueueResultsTimeouts[guildId]);
+        postQueueResultsTimeouts[guildId] = setTimeout(() => {
           postQueueResults(message, queueResults, config);
           // Clear out QueueResults for this guild
           queueResults = queueResults.filter(qr => qr.guildId != message.guild.id);

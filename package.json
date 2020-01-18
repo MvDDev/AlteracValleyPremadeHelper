@@ -1,6 +1,6 @@
 {
   "name": "alteracvalleypremadehelper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Discord Bot that eases creation of AV Premades",
   "main": "dist/index.js",
   "scripts": {
