@@ -1,7 +1,7 @@
 # Alterac Valley (AV) Premade Helper
 > Nodejs discord bot written in typescript that helps create AV premades.
 
-Bot parses (AV) numbers posted to configurabLe channel, summarizes the results
+Bot parses (AV) numbers posted to configurable channel, summarizes the results
 and then posts the summary as an embed with clickable voice channel invites.
 Voice channels should be named AV* and the bot must have permission to create 
 invites for those voice channels.
