@@ -25,6 +25,6 @@
     "typescript": "^3.8.3"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.20"
   }
 }
